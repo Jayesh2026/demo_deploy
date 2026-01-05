@@ -26,8 +26,7 @@ COPY --chown=bntsoft:root build/libs/*.jar ${DEMO}/
 
 # Remove plain JAR if exists and rename executable JAR
 RUN rm -f ${DEMO}/*-plain.jar \
-    && mv ${DEMO}/*.jar ${DEMO}/app.jar \
-    && chmod 500 ${DEMO}/app.jar
+    && mv ${DEMO}/*.jar ${DEMO}/app.jar 
 
 RUN chmod -R 755 "$DEMO"
 
